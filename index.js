@@ -12,7 +12,7 @@ for (let lemniscata = 1;lemniscata < 10;lemniscata++ ){
     <div class="card-body">
       <h5 class="card-title">Producto ${lemniscata}</h5>
       <p class="card-text">Info cheta sobre autos</p>
-      <a href="#" class="btn btn-primary">Ver más</a>
+      <a href="../producto.html" class="btn btn-primary">Ver más</a>
     </div>
     </div>`;
     lamp.push(cartam); 
