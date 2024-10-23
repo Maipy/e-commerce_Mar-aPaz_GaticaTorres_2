@@ -1,0 +1,20 @@
+/* Color Theme Swatches in Hex */
+.árbol-en-las-manos-1-hex { color: #497320; }
+.árbol-en-las-manos-2-hex { color: #3E5916; }
+.árbol-en-las-manos-3-hex { color: #88A61C; }
+.árbol-en-las-manos-4-hex { color: #C8D98B; }
+.árbol-en-las-manos-5-hex { color: #734F30; }
+
+/* Color Theme Swatches in RGBA */
+.árbol-en-las-manos-1-rgba { color: rgba(73, 114, 32, 1); }
+.árbol-en-las-manos-2-rgba { color: rgba(62, 89, 22, 1); }
+.árbol-en-las-manos-3-rgba { color: rgba(135, 165, 28, 1); }
+.árbol-en-las-manos-4-rgba { color: rgba(199, 216, 138, 1); }
+.árbol-en-las-manos-5-rgba { color: rgba(114, 79, 48, 1); }
+
+/* Color Theme Swatches in HSLA */
+.árbol-en-las-manos-1-hsla { color: hsla(90, 56, 28, 1); }
+.árbol-en-las-manos-2-hsla { color: hsla(84, 59, 21, 1); }
+.árbol-en-las-manos-3-hsla { color: hsla(73, 70, 38, 1); }
+.árbol-en-las-manos-4-hsla { color: hsla(73, 50, 69, 1); }
+.árbol-en-las-manos-5-hsla { color: hsla(28, 40, 31, 1); }
