@@ -1,8 +1,7 @@
 
 let categorias = [
-    {texto: "Materiales", href: "/Materiales"},
     {texto: "Nosotros", href: "/Nosotros"},
-    {texto: "Inicio", href: "/Inicio"},
+    {texto: "Inicio", href: "./index.html"},
 ]
 let item = [];
 
