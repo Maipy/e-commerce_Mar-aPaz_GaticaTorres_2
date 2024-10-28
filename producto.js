@@ -14,14 +14,15 @@ const url = parseInt(params.get('prod'));
 const filtrarProducto = data.find(prod => prod.id === url);
 
 const htmlProducto = `
-  <div class="card mb-3" style="max-width: 540px;">
+<div class="container text-center">
+  <div class="card mb-3">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="${filtrarProducto.img}" class="img-fluid rounded-start" alt="">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h1 class="card-title">${filtrarProducto.title}</h1>
+          <h1 class="card-title" class=>${filtrarProducto.title}</h1>
           <p class="card-text">${filtrarProducto.detail}</p>
           <p class="card-text">${filtrarProducto.detail_2}</p>
           <p class="card-text">Precio: $${filtrarProducto.price}</p>
@@ -30,6 +31,7 @@ const htmlProducto = `
       </div>
     </div>
   </div>
+</div>
 `;
 
 const main = document.querySelector("main")

@@ -18,3 +18,17 @@
 .árbol-en-las-manos-3-hsla { color: hsla(73, 70, 38, 1); }
 .árbol-en-las-manos-4-hsla { color: hsla(73, 50, 69, 1); }
 .árbol-en-las-manos-5-hsla { color: hsla(28, 40, 31, 1); }
+
+.backgroundLogin{
+background-image: radial-gradient(#88a61c 2px, transparent 2px), radial-gradient(#88a61c 2px, transparent 2px);
+background-size: 32px 32px;
+background-position: 0 0, 16px 16px;
+background-color: #e8f0cc;
+}
+header {
+    background-color: #e8f0cc;
+}
+.nav-link{
+    color:#734F30;
+    align-items:flex-end;
+}
