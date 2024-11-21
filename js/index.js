@@ -1,7 +1,7 @@
-const productos = "Productos";
-document.querySelector("h1").innerText = productos;
+const prods = document.querySelector("h1")
+prods.innerText = "Productos ";
 
-function cartas(data){
+function cartas(){
     let card = data.map((producto) => `
     <div class="card mb-3" style="width: 18rem;">
       <a href="#"><img src="${producto.img}" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="${producto.id}"></a>
@@ -17,38 +17,38 @@ function cartas(data){
 
   document.querySelector("section").innerHTML = card.join("")
 }
-cartas(data);
 
 function filterList() {
   const input = document.querySelector("#search").value.toLowerCase();
-  const filterData = data.filter((prod) => prod.title.toLowerCase().includes(input)
-)
+  const filterData = data.filter((prod) =>
+    prod.title.toLowerCase().includes(input.value.toLowerCase()))
   if(filterData.length > 0){
     cartas(filterData)
   } else{
     document.querySelector("section").innerText = "El producto buscado no existe"
   }
 };
+
 function resetInput() {
   document.querySelector("#search").value = "";
   cartas(data);
 }
-document
-    .querySelector("#filter")
-    .addEventListener("click", filterList);
+document.querySelector("#filter")
+document.addEventListener("click", filterList);
 document.querySelector("#reset").addEventListener("click", resetInput);
 document.addEventListener("DOMContentLoaded", () => {
-    dataCards(data);
+    cartas(data);
   })
 filterList()
 resetInput()
+
 function filterCategory(category){
   if (category === "Todos"){
     cartas(data);
   }else if (category ==="Vestido"){
     const vestido = data.filter(prenda => prenda.category === "Vestido");
     cartas(vestido);
-  }else if (category ==="Falda"){
+  }else if (category === "Falda"){
     const falda = data.filter(prenda => prenda.category === "Falda");
     cartas(falda);
   }else if (category ==="Caftán"){
@@ -59,3 +59,4 @@ function filterCategory(category){
     cartas(pantalones);
   }
 }
+filterCategory(category)

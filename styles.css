@@ -20,15 +20,57 @@
 .árbol-en-las-manos-5-hsla { color: hsla(28, 40, 31, 1); }
 
 .backgroundLogin{
-background-image: radial-gradient(#88a61c 2px, transparent 2px), radial-gradient(#88a61c 2px, transparent 2px);
-background-size: 32px 32px;
-background-position: 0 0, 16px 16px;
-background-color: #e8f0cc;
+    background-image: radial-gradient(#88a61c 2px, transparent 2px), radial-gradient(#88a61c 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    background-color: #e8f0cc;
 }
 header {
     background-color: #e8f0cc;
 }
-.nav-link{
-    color:#734F30;
+.nav-item{
+    color:#503926;
     align-items:flex-end;
 }
+.navbar-brand{
+    color:#503926;
+}
+#navCollections{
+    color: #503926;
+}
+.navbar{
+    background-color: #C8D98B;
+}
+.bodyLog {
+    margin: 20%;
+    width: 250px;
+    background-color:#497320;
+    padding: 15px;
+    border-radius: 10%;
+   }
+.bodyLog label{
+    color:aliceblue
+} 
+.btn-primary{
+    background-color: #C8D98B;
+    border-color: #C8D98B;
+    color: #3E5916;
+}
+#formLoginMessage{
+    color:aliceblue;
+}
+#imgCart{
+    border-radius: 20%;
+}
+/*/revisar/*/
+#cart .card .me-4 {
+    width: 180px;
+    overflow: hidden;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+   }
+#cart .card .me-4 img {
+    width: 100%;
+   }
