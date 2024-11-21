@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/png" href="./assets/favicon.png" />
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
       <link rel="stylesheet" href="./styles.css"/>
     </head>
     <body id="cart">
@@ -19,7 +20,7 @@
               </div>
               <div class="col-sm-3">
                 <div class="text-sm-end mt-2 mt-sm-0">
-                  <button id="btn-checkout" class="btn btn-success" onclick="clearCart()">Vaciar Carrito</button>
+                  <button id="btn-clear-cart" class="btn btn-success" onclick="cleanCart()">Vaciar Carrito</button>
                 </div>
               </div>
               <div class="col-sm-3">
@@ -57,5 +58,7 @@
   <script src="./js/navbar.js"></script>
   <script src="./js/cart.js"></script>
   <link rel="stylesheet" src="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
  </body>
 </html>

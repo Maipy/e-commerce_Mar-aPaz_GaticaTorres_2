@@ -68,14 +68,70 @@ function removeItem(id){
   quantityTag.innerText = quantity
 }
 
-function clearCart(){
-  let quantityTag = document.querySelector("#quantity")
-  quantityTag.innerText = "0"
-  localStorage.setItem("cart", JSON.stringify([]))
-  getCart([])
-  total([])
-  document.querySelector("#btn-clear-cart").style.display = "none"
+function cleanCart(){
+  localStorage.setItem("cart", JSON.stringify([]));
+    localStorage.setItem("quantity", "0");
+    getCart([]);
+    total([]);
+    const quantityTag = document.querySelector("#quantity");
+    quantityTag.innerText = "0";
 }
+
 function moreClothes(){
   location.href = "./index.html"
 }
+function checkout() {
+  const quantity = parseInt(localStorage.getItem("quantity")) || 0;
+  if (quantity == 0) {
+      Toastify({
+          text: "¡No hay productos en el carrito!",
+          style: {
+              background: "#3E5916",
+          },
+          offset: {
+              y: 10,
+          },
+      }).showToast();
+    }else{
+      Swal.fire({
+      text: "¿Estás seguro/a de que quieres realizar la compra?",
+      confirmButtonText: "Sí",
+      cancelButtonText: "No",
+      showCancelButton: true,
+      showCloseButton: true,
+      confirmButtonColor: "#88A61C",
+      cancelButtonColor: "red",
+  }).then((result) => {
+      if (result.isConfirmed) {
+          const datos = {
+            user: localStorage.getItem("email"),
+            items: JSON.parse(localStorage.getItem("cart")) || [],
+        };
+          fetch("https://673f8e51a9bc276ec4b8f25d.mockapi.io/orders", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify(datos),
+          })
+              .then((response) => response.json())
+              .then((order) => {
+                Swal.fire({
+                  text: `Gracias por tu compra ${order.user}. Numero de orden: ${order.id}`,
+                  confirmButtonText: "OK",
+                  confirmButtonColor: "#88A61C",
+              }); 
+                  cleanCart();
+              })
+              .catch((error) => {
+                  console.error("No se puede procesar la solicitud:", error);
+                  Swal.fire({
+                    text: "Lo siento, no pudimos procesar la solicitud...",
+                    confirmButtonText: "OK",
+                    confirmButtonColor: "#88A61C",
+                })
+
+              });
+      }
+  });
+}}
