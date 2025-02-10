@@ -25,10 +25,11 @@
     background-position: 0 0, 16px 16px;
     background-color: #e8f0cc;
 }
-header {
-    background-color: #e8f0cc;
-}
 .nav-item{
+    color:#503926;
+    align-items:flex-end;
+}
+span{
     color:#503926;
     align-items:flex-end;
 }
@@ -38,7 +39,7 @@ header {
 #navCollections{
     color: #503926;
 }
-.navbar{
+#nav{
     background-color: #C8D98B;
 }
 .bodyLog {
@@ -51,7 +52,17 @@ header {
 .bodyLog label{
     color:aliceblue
 } 
-.btn-primary{
+.btn-secondary{
+    background-color: #C8D98B;
+    border-color: #C8D98B;
+    color: #3E5916;
+}
+.btn:hover{
+    background-color: #503926;
+    border-color: #503926;
+    color:#f2fde2;
+}
+.btn{
     background-color: #C8D98B;
     border-color: #C8D98B;
     color: #3E5916;
@@ -61,6 +72,22 @@ header {
 }
 #imgCart{
     border-radius: 20%;
+}
+#titleNav{
+    color:#503926;
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    font-style: normal; 
+}
+#titleProds{
+    padding: 2%;
+    text-align: center;
+    color:#503926;
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
 }
 /*/revisar/*/
 #cart .card .me-4 {
@@ -74,3 +101,9 @@ header {
 #cart .card .me-4 img {
     width: 100%;
    }
+.stybtn{
+    background-color: #497320;
+    border-color: #C8D98B;
+    color: #f2fde2;
+    border-radius: 20% ;
+}

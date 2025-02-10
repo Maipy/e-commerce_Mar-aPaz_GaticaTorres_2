@@ -41,7 +41,7 @@ function getCart(data){
           </div>
         </div>`
     )
-    cardsSection.innerHTML = list.join("");
+    cardsSection.innerHTML = list.join("")
 }
 getCart(JSON.parse(localStorage.getItem("cart")))
 
